@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            after login page
+        </title>
+        <link rel="stylesheet"
+              href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    </head>
+    <style>
+        img        {width:  50px}
+        input      {margin: 10px}
+        .container {margin: 10px}
+    </style>
+    <body>
+        <div class="container panel panel-success">
+            <div class="panel-heading">
+                Your Profile
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Pic</th>
+                            <th>Name</th>
+                            <th>Provider</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <th>
+                            <img src={{.UserData.avatar_url}}>
+                        </th>
+                        <th>
+                            {{.UserData.name}}
+                        </th>
+                        <th>
+                            {{.UserData.provider}}
+                        </th>                        
+                    </tbody>
+                </table>
+            </div>            
+        </div>
+        <div class="border-promary">
+            <form action="/logout" type="poth">
+                <input type="submit" value="Logout" class="btn btn-primary">
+            </form>
+        </div>
+    </body>
+</html>
